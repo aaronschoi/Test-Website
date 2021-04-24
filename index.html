@@ -23,7 +23,7 @@
             };
             function getLocation() {
                 if(navigator.geolocation){
-                    navigator.geolocation.getCurrentPosition(location => console.log(location))
+                    navigator.geolocation.getCurrentPosition(location => console.log(`${location.coords.latitude}${location.coords.longitude}`))
                 }
             };
         </script>
