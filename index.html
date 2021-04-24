@@ -15,11 +15,17 @@
     <body>
         <h1>Yo. Does this work?</h1>
         <button type="button" onclick="copyThis()">test</button>
+        <button type="button" onclick="getLocation()">locale</button>
         
         <script>
             function copyThis() {
                 navigator.clipboard.writeText('Nice. This will paste to a phone app.')
-            }
+            };
+            function getLocation() {
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(location => console.log(location))
+                }
+            };
         </script>
     </body>
 </html>
